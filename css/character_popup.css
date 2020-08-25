@@ -1,0 +1,707 @@
+html, body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+/**메뉴 z-300**/
+#menu {
+    position : fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+}
+
+#menu > div {
+    position : fixed;
+}
+
+#menu > h1 {
+    position : fixed;
+}
+
+#menu .ham {
+    height: 19px;
+    top: 54px;
+    left: 54px;
+}
+
+#menu .logo {
+    width: 106px;
+    height: 47px;
+    left: 54px;
+    bottom: 40px;
+}
+
+#menu .instagram {
+    width: 17px;
+    height: 17px;
+    bottom: 54px;
+    left: 247px;
+}
+
+#menu .youtube {
+    width: 23px;
+    height: 17px;
+    bottom: 54px;
+    left: 296px;
+    overflow: hidden;
+}
+
+#menu .sound {
+    width: 22px;
+    height: 17px;
+    bottom: 54px;
+    left: 373px;
+}
+
+#menu .language {
+    width: 63px;
+    height: 14px;
+    bottom: 54px;
+    right: 54px;
+}
+/**메뉴 끝**/
+
+/**header z-800**/
+#header {
+    width: 100%;
+    height: 100%;
+    position : fixed;
+    left: 0;
+    top: 0;
+    z-index: 800;
+    display: none;
+}
+
+#header .bg {
+    position : absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 980px;
+    background: url("../images/common/menu/menu_bg.jpg")no-repeat left top;
+}
+
+#header .icon_close {
+    position : absolute;
+    left: 50px;
+    top: 50px;
+}
+
+#header .list {
+    width: 1044px;
+    height: 291px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#header .list > li{
+    height: 89px;
+    position: absolute;
+}
+
+#header .list > li > a {
+    display: block;
+}
+
+a,a:visited,a:hover,a:active{
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    position:relative;
+    transition:0.5s color ease;
+}
+
+a.before:before,a.after:after{
+    content: "";
+    transition:0.5s all ease;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    position:absolute;
+}
+a.before:before{
+    top:-0.25em;
+}
+a.after:after{
+    bottom:-0.25em;
+}
+a.before:before,a.after:after{
+    height:5px;
+    height:0.30rem;
+    width:0;
+    background:#ec0f1f;
+}
+a.first:after{
+    left:70px;
+}
+a.second:after{
+    right:0;
+}
+a.third:after,a.sixth:before,a.sixth:after{
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
+}
+a.fourth:before,a.fourth:after{
+    left:0;
+}
+a.fifth:before,a.fifth:after{
+    right:0;
+}
+a.seventh:before{
+    right:0;
+}
+a.seventh:after{
+    left:0;
+}
+a.eigth:before{
+    left:0;
+}
+a.eigth:after{
+    right:0;
+}
+a.before:hover:before,a.after:hover:after{
+    width:80%;
+}
+
+#header .list .list_synopsis {
+    width: 403px;
+    top: 0;
+    left: 0;
+}
+
+#header .list .list_characters{
+    width: 471px;
+    top: 0;
+    right: 0;
+}
+
+#header .list .list_gallery{
+    width: 348px;
+    bottom: 0;
+    left: 0;
+}
+
+#header .list .list_trailer{
+    width: 323px;
+    bottom: 0;
+    right: 148px;
+}
+/**header 끝**/
+#character {
+    width: 1920px;
+    height:980px;
+    background: url("../images/common/character/character_bg.jpg")no-repeat;
+}
+
+/**팝업 공통버튼 시작**/
+#character .button {}
+/**#button .button_in     z-100**/
+#character .button .button_in > div {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#character .button .button_line > div {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+}
+
+#character .button .button_in .character_button_1{
+    top: 190px;
+    left: 226px;
+}
+
+#character .button .button_in .character_button_2{
+    top: 100px;
+    left: 724px;
+}
+
+#character .button .button_in .character_button_3 {
+    top: 160px;
+    right: 824px;
+}
+
+#character .button .button_in .character_button_4{
+    top: 284px;
+    left: 1065px;
+}
+
+#character .button .button_in .character_button_5{
+    top: 197px;
+    right: 277px;
+}
+
+
+
+#character .button .button_line .character_button_line_1{
+    top: 190px;
+    left: 226px;
+}
+
+#character .button .button_line .character_button_line_2{
+    top: 100px;
+    left: 724px;
+}
+
+#character .button .button_line .character_button_line_3{
+    top: 160px;
+    right: 824px;
+}
+
+#character .button .button_line .character_button_line_4{
+    top: 284px;
+    left: 1065px;
+}
+
+#character .button .button_line .character_button_line_5{
+    top: 197px;
+    right: 277px;
+}
+
+
+#character .button .button_line .character_button_line_1 {animation:scaleBounce .9s alternate infinite; border-radius:50em;}
+@keyframes scaleBounce{
+    from {transform:scale(.8)}
+    to {transform:scale(1.1)}
+}
+
+#character .button .button_line .character_button_line_2 {animation:scaleBounce .9s alternate infinite; border-radius:50em;}
+@keyframes scaleBounce{
+    from {transform:scale(.8)}
+    to {transform:scale(1.1)}
+}
+
+#character .button .button_line .character_button_line_3 {animation:scaleBounce .9s alternate infinite; border-radius:50em;}
+@keyframes scaleBounce{
+    from {transform:scale(.8)}
+    to {transform:scale(1.1)}
+}
+
+#character .button .button_line .character_button_line_4 {animation:scaleBounce .9s alternate infinite; border-radius:50em;}
+@keyframes scaleBounce{
+    from {transform:scale(.8)}
+    to {transform:scale(1.1)}
+}
+
+#character .button .button_line .character_button_line_5 {animation:scaleBounce .9s alternate infinite; border-radius:50em;}
+@keyframes scaleBounce{
+    from {transform:scale(.8)}
+    to {transform:scale(1.1)}
+}
+
+
+#character .character_noti{
+    position: absolute;
+    width: 144px;
+    height: 16px;
+    bottom: 53px;
+    left: 50%;
+    margin-left: -72px;
+    -webkit-animation: fadeOut 1.5s 1s infinite linear alternate;
+    -moz-animation: fadeOut 1.5s 1s infinite linear alternate;
+    -ms-animation: fadeOut 1.5s 1s infinite linear alternate;
+    -o-animation: fadeOut 1.5s 1s infinite linear alternate;
+    animation: fadeOut 1.5s 1s infinite linear alternate;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-moz-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-ms-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-o-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/**등장인물소개 끝**/
+
+
+
+#popup {
+    width: 1920px;
+    height: 980px;
+    background: url("../images/common/character/character_detail_bg.jpg")no-repeat;
+    position : relative;
+    margin: 0 auto;
+    display: none;
+}
+#popup > div {}
+
+#popup .icon_close {
+    position: fixed;
+    width: 31px;
+    height: 31px;
+    top: 54px;
+    right: 54px;
+    z-index: 9999;
+    cursor: pointer;
+}
+/**팝업 공통버튼 끝**/
+
+
+
+/**클라라 시작**/
+
+#slides .slick-dots li button{
+    display: none;
+}
+
+#slides {
+    width: 1920px;
+    height: 980px;
+    position: relative;
+}
+
+#slides .slick-slide {
+    width: 1920px;
+    height: 980px;
+    position : relative;
+}
+
+#popup .slide_wrap .character_image{
+    position: absolute;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all .3s;
+}
+
+#popup .slide_wrap.on .character_image {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#popup .slide_wrap .font_contents {
+    width: 656px;
+    height: 327px;
+    position: relative;
+    transform: translate(-150px);
+    opacity : 0;
+    transition: all .8s;
+}
+
+#popup .slide_wrap.on .font_contents {
+    transform: translate(0, 0);
+    opacity : 1;
+}
+
+#popup .slide_wrap .page {
+    width: 69px;
+    height: 47px;
+    position : absolute;
+    top: 98px;
+    right: 165px;
+    transform: translate(-100px);
+    opacity : 0;
+    transition: all .8s;
+}
+
+#popup .slide_wrap.on .page {
+    transform: translate(0, 0);
+    opacity : 1;
+}
+
+#popup .slide_wrap .font_contents .name {
+    position : absolute;
+    transform: translate(-50px);
+    opacity : 0;
+    transition: all 1.3s;
+}
+
+#popup .slide_wrap.on .font_contents .name {
+    transform: translate(0, 0);
+    opacity : 1;
+}
+
+#popup .slide_wrap .font_contents .description {
+    position : absolute;
+    transform: translate(-50px);
+    opacity : 0;
+    transition: all 1.8s;
+}
+
+#popup .slide_wrap.on .font_contents .description {
+    transform: translate(0, 0);
+    opacity : 1;
+}
+
+
+
+#popup .slide_wrap .c1 {
+    position : absolute;
+    top: 126px;
+    right: 130px;
+}
+
+#popup .slide_wrap .p1 {
+    position : absolute;
+    top: 98px;
+    right: 165px;
+}
+
+#popup .slide_wrap .f1 {
+    position : absolute;
+    top: 452px;
+    left: 226px;
+}
+
+#popup .slide_wrap.character_clara .font_contents > li {
+    position: absolute;
+    left: 0;
+}
+
+
+#popup .character_clara .font_contents .character_name {
+    width: 656px;
+    height: 139px;
+    top: 0;
+}
+
+#popup .character_clara .font_contents .name {
+    width: 228px;
+    height: 33px;
+    top: 212px;
+}
+
+#popup .character_clara .font_contents .description {
+    width: 340px;
+    height: 48px;
+    bottom: 0;
+}
+/**클라라 끝**/
+
+
+
+/**drossel 시작**/
+#slides .character_drossel {}
+
+#slides .character_drossel > ul {}
+
+
+#popup .slide_wrap .c2 {
+    position : absolute;
+    top: 126px;
+    right: 130px;
+}
+
+#popup .slide_wrap .p2 {
+    position : absolute;
+    top: 98px;
+    right: 165px;
+}
+
+#popup .slide_wrap .f2 {
+    position : absolute;
+    left: 222px;
+}
+
+
+#slides .character_drossel .font_contents > li {
+    position: absolute;
+}
+
+#slides .character_drossel .font_contents .character_name {
+    width: 865px;
+    height: 313px;
+    top: 275px;
+}
+
+#slides .character_drossel .font_contents .name {
+    width: 316px;
+    height: 32px;
+    top: 668px;
+}
+
+#slides .character_drossel .font_contents .description {
+    width: 301px;
+    height: 46px;
+    top: 733px;
+}  /**drossel 끝**/
+
+
+/**sugar 시작**/
+#slides .character_sugar {}
+
+#slides .character_sugar > ul {}
+
+#slides .character_sugar > div {
+    position: absolute;
+}
+
+#slides .character_sugar .character_image {
+    width: 1365px;
+    height: 728px;
+    top: 126px;
+    right: 118px;
+}
+
+#slides .character_sugar .page {
+    width: 68px;
+    height: 48px;
+    top: 98px;
+    right: 165px;
+}
+
+#slides .character_sugar .font_contents > li {
+    position: absolute;
+    left: 222px;
+}
+
+#slides .character_sugar .font_contents .character_name {
+    width: 664px;
+    height: 319px;
+    top: 272px;
+}
+
+#slides .character_sugar .font_contents .name {
+    width: 242px;
+    height: 33px;
+    top: 667px;
+}
+
+#slides .character_sugar .font_contents .description {
+    width: 168px;
+    height: 49px;
+    top: 734px;
+}  /**sugar 끝**/
+
+
+
+
+/**mother 시작**/
+#slides .character_mother {}
+
+#slides .character_mother > ul {}
+
+#slides .character_mother > div {
+    position: absolute;
+}
+
+#slides .character_mother .character_image {
+    width: 1093px;
+    height: 728px;
+    top: 125px;
+    right: 118px;
+}
+
+#slides .character_mother .page {
+    width: 69px;
+    height: 47px;
+    top: 98px;
+    right: 165px;
+}
+
+#slides .character_mother .font_contents > li {
+    position: absolute;
+    left: 222px;
+}
+
+#slides .character_mother .font_contents .character_name {
+    width: 826px;
+    height: 317px;
+    top: 275px;
+}
+
+#slides .character_mother .font_contents .name {
+    width: 203px;
+    height: 25px;
+    top: 667px;
+}
+
+#slides .character_mother .font_contents .description {
+    width: 168px;
+    height: 49px;
+    top: 734px;
+}/**mother 끝**/
+
+
+/**philip 시작**/
+#slides .character_philip {}
+
+#slides .character_philip > ul {}
+
+#slides .character_philip > div {
+    position: absolute;
+}
+
+#slides .character_philip .character_image {
+    width: 1094px;
+    height: 728px;
+    top: 125px;
+    right: 118px;
+}
+
+#slides .character_philip .page {
+    width: 67px;
+    height: 47px;
+    top: 99px;
+    right: 165px;
+}
+
+#slides .character_philip .font_contents > li {
+    position: absolute;
+    left: 222px;
+}
+
+#slides .character_philip .font_contents .character_name {
+    width: 953px;
+    height: 313px;
+    top: 275px;
+}
+
+#slides .character_philip .font_contents .name {
+    width: 342px;
+    height: 33px;
+    top: 667px;
+}
+
+#slides .character_philip .font_contents .description {
+    width: 187px;
+    height: 49px;
+    top: 734px;
+}/**philip 끝**/

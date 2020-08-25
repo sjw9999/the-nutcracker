@@ -1,0 +1,1358 @@
+body {
+    background: #080808;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/**로딩. z-900**/
+#loading {
+    width: 100%;
+    height: 100%;
+    position : fixed;
+    left: 0;
+    top: 0;
+    background: #080808;
+    z-index: 900;
+    /*display: none;*/
+}
+
+#loading .loading_title {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left:  -110px;
+    margin-top: -110px;
+    animation: loading 25s linear infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/**인트로1**/
+#intro {
+    width: 100%;
+    height: 100%;
+    position : fixed;
+    left: 0;
+    top: 0;
+    background: url("../images/common/intro_2/intro_2_bg.png")no-repeat;
+    transition: all 5s;
+}
+
+#intro.on {
+    top: -7000px;
+}
+
+#intro .contents {
+    background: url("../images/common/intro_into.jpg")no-repeat left top;
+    height: 8000px;
+}
+/**인트로1버튼 z-100**/
+#intro .contents > div {
+    position: absolute;
+    left: 50%;
+    z-index: 100;
+}
+
+#intro .contents .logo_b {
+    width: 656px;
+    height: 364px;
+    top: 196px;
+    margin-left: -328px;
+}
+
+#intro .contents .begin_font {
+    width: 38px;
+    height: 14px;
+    bottom: 259px;
+    margin-left: -19px;
+}
+
+#intro .contents .begin_circle_b {
+    width: 155px;
+    height: 155px;
+    bottom: 189px;
+    margin-left: -77.5px;
+}
+
+
+#intro .contents .begin_circle_b {animation:scaleBounce .9s alternate infinite; border-radius:50em;}
+@keyframes scaleBounce{
+    from {transform:scale(.9)}
+    to {transform:scale(1)}
+}
+
+#intro .contents .begin_line {
+    width: 1px;
+    height: 91px;
+    bottom: 98px;
+    margin-left: -0.5px;
+}
+
+#intro .contents .begin_circle_s {
+    width: 40px;
+    height: 40px;
+    bottom: 58px;
+    margin-left: -20px;
+}
+
+#intro_video {
+    position : absolute;
+    left: 0;
+    top: 0;
+}
+
+/**인트로2**/
+#intro2 {
+    width: 100%;
+    height: 100%;
+    position : fixed;
+    left: 0;
+    top: 8000px;
+    transition: all 5s;
+}
+
+#intro2.on{
+    top: 0;
+}
+
+#intro2.out {
+    left: -1920px;
+}
+
+
+
+#intro2 .font > div {
+    position: absolute;
+    width: 802px;
+    height: 87px;
+    top: 50%;
+    left: 50%;
+    margin-top: -43.5px;
+    margin-left: -401px;
+    opacity : 0;
+    transition: all 1.5s;
+}
+/*#intro2 .font > div:nth-child(2){transition-delay: .5s;}*/
+
+#intro2 .font .on{
+    position: absolute;
+    width: 802px;
+    height: 87px;
+    top: 50%;
+    left: 50%;
+    margin-top: -43.5px;
+    margin-left: -401px;
+    opacity : 1;
+    transition: all 2s;
+}
+
+#intro2 .gold_key {
+    position : absolute;
+    left: 882px;
+    top: 0;
+    opacity : 0;
+    transition: all 1s;
+    /*transition-delay: .5s;*/
+
+}
+
+#intro2 .gold_key.on {
+    opacity : 1;
+    animation: key 5s .8s linear infinite;
+    transform-origin: top center;
+}
+
+@keyframes key {
+    0%{transform: rotateZ(0deg);}
+    25%{transform: rotateZ(10deg);}
+    50%{transform: rotateZ(0deg);}
+    75%{transform: rotateZ(-10deg);}
+    100%{transform: rotateZ(0deg);}
+}
+
+#intro2 .intro_btn {
+    position: absolute;
+    width: 97px;
+    height: 97px;
+    bottom: 100px;
+    left: 50%;
+    margin-left: -48.5px;
+}
+
+
+#intro2 .intro_btn .button_circle {
+    animation: loading 25s linear infinite;
+}
+
+@keyframes button_circle {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+#intro2 .intro_btn .button_shape {
+    width: 15px;
+    height: 25px;
+    position: absolute;
+    top: 36px;
+    left: 41px;
+}
+
+
+#intro2 .intro_btn .button_shape {
+    -webkit-animation: intro_btn_anim 2s infinite;
+    animation: intro_btn_anim 2s infinite;
+}
+
+@-webkit-keyframes intro_btn_anim {
+    0% {
+        -webkit-transform: translate(0, 0);
+    }
+    20% {
+        -webkit-transform: translate(5px, 0);
+    }
+    40% {
+        -webkit-transform: translate(0, 0);
+    }
+}
+@keyframes intro_btn_anim {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(5px, 0);
+    }
+    40% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
+/**메뉴 z-300**/
+#menu {
+    position : fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    opacity : 0;
+    transition: all 1s;
+}
+
+#menu.on {
+    opacity : 1;
+}
+
+
+#menu > div {
+    position : fixed;
+}
+
+#menu > h1 {
+    position : fixed;
+}
+
+#menu .ham {
+    height: 19px;
+    top: 54px;
+    left: 54px;
+}
+
+#menu .logo {
+    width: 106px;
+    height: 47px;
+    left: 54px;
+    bottom: 40px;
+}
+
+#menu .instagram {
+    width: 17px;
+    height: 17px;
+    bottom: 54px;
+    left: 247px;
+}
+
+#menu .youtube {
+    width: 23px;
+    height: 17px;
+    bottom: 54px;
+    left: 296px;
+    overflow: hidden;
+}
+
+#menu .sound {
+    width: 22px;
+    height: 17px;
+    bottom: 54px;
+    left: 373px;
+}
+
+#menu .language {
+    width: 63px;
+    height: 14px;
+    bottom: 54px;
+    right: 54px;
+}
+
+
+/**header z-800**/
+#header {
+    width: 100%;
+    height: 100%;
+    position : fixed;
+    left: 0;
+    top: 0;
+    z-index: 800;
+    display: none;
+}
+
+#header .bg {
+    position : absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 980px;
+    background: url("../images/common/menu/menu_bg.jpg")no-repeat left top;
+}
+
+#header .icon_close {
+    position : absolute;
+    left: 50px;
+    top: 50px;
+}
+
+#header .list {
+    width: 1044px;
+    height: 291px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#header .list > li{
+    height: 89px;
+    position: absolute;
+}
+
+#header .list > li > a {
+    display: block;
+}
+
+a,a:visited,a:hover,a:active{
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    position:relative;
+    transition:0.5s color ease;
+}
+
+a.before:before,a.after:after{
+    content: "";
+    transition:0.5s all ease;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    position:absolute;
+}
+a.before:before{
+    top:-0.25em;
+}
+a.after:after{
+    bottom:-0.25em;
+}
+a.before:before,a.after:after{
+    height:5px;
+    height:0.30rem;
+    width:0;
+    background:#ec0f1f;
+}
+a.first:after{
+    left:70px;
+}
+a.second:after{
+    right:0;
+}
+a.third:after,a.sixth:before,a.sixth:after{
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
+}
+a.fourth:before,a.fourth:after{
+    left:0;
+}
+a.fifth:before,a.fifth:after{
+    right:0;
+}
+a.seventh:before{
+    right:0;
+}
+a.seventh:after{
+    left:0;
+}
+a.eigth:before{
+    left:0;
+}
+a.eigth:after{
+    right:0;
+}
+a.before:hover:before,a.after:hover:after{
+    width:80%;
+}
+
+#header .list .list_synopsis {
+    width: 403px;
+    top: 0;
+    left: 0;
+}
+
+#header .list .list_characters{
+    width: 471px;
+    top: 0;
+    right: 0;
+}
+
+#header .list .list_gallery{
+    width: 348px;
+    bottom: 0;
+    left: 0;
+}
+
+#header .list .list_trailer{
+    width: 323px;
+    bottom: 0;
+    right: 148px;
+}
+/**header 끝**/
+
+/**page z-600**/
+.page {
+    width: 636px;
+    height: 70px;
+    position : fixed;
+    left: 50%;
+    bottom: 30px;
+    margin-left: -318px;
+    z-index: 600;
+    opacity : 0;
+    transition: all 1s;
+    /*transform: translateY(20px);*/
+}
+
+.page.on {
+    opacity : 1;
+    transform: translateY(0);
+}
+
+.page .line {
+    position: absolute;
+    top: 30px;
+}
+
+.page .circle {
+    position: absolute;
+    top: 30px;
+    margin-left: 186px;
+}
+
+.page .circle > li{
+    float : left;
+    margin-right: 72px;
+    transition: all 1s;
+}
+
+.page .circle > li > a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url("../images/common/sub/page_circle.png")no-repeat left top;
+    transition: all .7s;
+}
+
+.page .circle > li > a.on {
+    width: 12px;
+    height: 12px;
+    background: url("../images/common/sub/page_circle_press.png")no-repeat left top;
+}
+
+
+.circle > li > a.on{}
+
+
+.page .font {
+    width: 636px;
+    height: 13px;
+}
+
+.page .font > div {
+    position: absolute;
+    top: 0;
+}
+
+.page .font .font_01 {
+    left: 184px;
+}
+
+.page .font .font_02{
+    left: 267px;
+}
+
+.page .font .font_03{
+    left: 352px;
+}
+
+.page .font .font_04{
+    left: 435px;
+}
+/**fix section  end **/
+
+
+
+/** main_popup  z-700 **/
+/**main_popup  시작 **/
+#section02_popup {
+    width: 100%;
+    height: 100%;
+    position : fixed;
+    z-index: 700;
+    display: none;
+}
+
+#section02_popup > div {}
+
+#section02_popup .bg {
+    position : absolute;
+    width: 1920px;
+    height: 1600px;
+    background: #02050c;
+    opacity: 90%;
+}
+
+#section02_popup .img {
+    width: 840px;
+    height: 1600px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -420px;
+}
+
+#section02_popup .img .img_content {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#section02_popup .img_font {
+    position: absolute;
+    top: 94px;
+    left: 0;
+}
+
+
+
+
+
+
+#section05_popup {
+    width: 100%;
+    height: 100%;
+    position : fixed;
+    z-index: 700;
+    display: none;
+}
+
+#section05_popup > div {}
+
+#section05_popup .bg {
+    position : absolute;
+    width: 1920px;
+    height: 1650px;
+    background: #02050c;
+    opacity: 90%;
+}
+
+#section05_popup .img {
+    width: 840px;
+    height: 1650px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -420px;
+}
+
+#section05_popup .img .img_content {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#section05_popup .img_font {
+    position: absolute;
+    top: 94px;
+    left: 0;
+}
+
+
+
+
+#section09_popup {
+    width: 100%;
+    height: 100%;
+    position : fixed;
+    z-index: 700;
+    display: none;
+}
+
+#section09_popup > div {}
+
+#section09_popup .bg {
+    position : absolute;
+    width: 1920px;
+    height: 1400px;
+    background: #02050c;
+    opacity: 90%;
+}
+
+#section09_popup .img {
+    width: 840px;
+    height: 1400px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -420px;
+}
+
+#section09_popup .img .img_content {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#section09_popup .img_font {
+    position: absolute;
+    top: 94px;
+    left: 0;
+}
+
+
+
+/** 시놉시스 파트 1 **/
+/** Scene01 **/
+#section01{
+    width: 1750px;
+    position: relative;
+}
+
+#section01 > div {
+    position: absolute;
+}
+
+#section01 .title {
+    width: 457px;
+    height: 315px;
+    top: 228px;
+    left: 249px;
+}
+
+#section01 .directions {
+    width: 106px;
+    height: 15px;
+    top :788px;
+    left: 907px;
+}
+
+#section01 .page {
+    width: 636px;
+    height: 58px;
+    bottom: 58px;
+    left: 50%;
+    margin-left: -318px;
+}
+
+
+#section01 .page > div > div {
+    position: absolute;
+}
+
+#section01 .page .font > div {
+    width: 17px;
+    height: 13px;
+    bottom: 0;
+}
+
+#section01 .page .font .font_01 {
+    left: 184px;
+}
+#section01 .page .font .font_02 {
+    left: 267px;
+}
+#section01 .page .font .font_03 {
+    right: 268px;
+}
+#section01 .page .font .font_04 {
+    right: 184px;
+
+}
+
+#section01 .page .circle > div {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#section01 .page .circle .circle_press {
+    left: 186px;
+}
+
+#section01 .page .circle_1 {
+    left: 270px;
+}
+
+#section01 .page .circle_2 {
+    right: 270px;
+}
+#section01 .page .circle_3 {
+    right: 186px;
+}
+
+#section01 .page .line {
+    width: 636px;
+    height: 12px;
+    top: 0;
+}
+
+
+
+/** Scene02 **/
+#section02{
+    width: 1700px;
+    height: 980px;
+    position: relative;
+}
+
+#section02 .background {
+    position: absolute;
+    left: 0;
+}
+
+/**section02 z-200**/
+#section02 .gradient {
+    width: 1071px;
+    position: relative;
+    left: 780px;
+    z-index: 200;
+}
+
+#section02 .gradient .gradient_bg {
+    position: absolute;
+    width: 1071px;
+    top: 553px;
+}
+/*#section02 .gradient .gradient_description {*/
+/*    position: absolute;*/
+/*    top: 778px;*/
+/*    left: 50%;*/
+/*    margin-left: -72px;*/
+/*}*/
+#section02 .gradient .gradient_button_arrow {
+    position: absolute;
+    top: 758px;
+    left: 92%;
+    margin-left: -18px;
+}
+
+#section02 .gradient .gradient_button_arrow {
+    -webkit-animation: popup_btn_anim 2s infinite;
+    animation: popup_btn_anim 2s infinite;
+}
+
+@-webkit-keyframes popup_btn_anim {
+    0% {
+        -webkit-transform: translateY(0);
+    }
+    20% {
+        -webkit-transform: translateY(5px);
+    }
+    40% {
+        -webkit-transform: translateY(0);
+    }
+}
+@keyframes popup_btn_anim {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(5px);
+    }
+    40% {
+        transform: translateY(0);
+    }
+}
+
+
+#section02 .gradient .gradient_button_circle {
+    position: absolute;
+    top: 730px;
+    left: 92%;
+    margin-left: -30.5px;
+}
+
+#section02 .gradient .gradient_button_circle {
+    animation: loading 25s linear infinite;
+}
+
+@keyframes button_circle {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+#section02_content > div {
+    position: absolute;
+}
+
+#section02_content .img_content{
+    position:relative;
+    width: 777px;
+    height: 1350px;
+    top: 0;
+    left: 957px;
+}
+
+#section02_content .img_font {
+    width: 28px;
+    height: 18px;
+    top: 95px;
+    left: 900px;
+}
+
+/*#section02_content .scroll_bg {*/
+/*    width: 12px;*/
+/*    height: 151px;*/
+/*    top: 329px;*/
+/*    left: 1788px;*/
+/*}*/
+
+/*#section02_content .scroll_bar {*/
+/*    width: 20px;*/
+/*    height: 318px;*/
+/*    top: 336px;*/
+/*    left: 1792px;*/
+/*}*/
+
+/*#section02_content .arrow {*/
+/*    width: 16px;*/
+/*    height: 55px;*/
+/*    left: 901px;*/
+/*    bottom: 91px;*/
+/*}*/
+
+/** Scene03 **/
+#section03{
+    left: 0;
+    width: 3122px;
+    height: 980px;
+    background: url("../images/common/sub_1/sub_1_img_2.png")no-repeat;
+}
+
+
+
+/** 시놉시스 파트 2 **/
+/** Scene04 **/
+
+#section04{
+    width: 1710px;
+    position: relative;
+    left: 0;
+}
+
+#section04 > div {
+    position: absolute;
+}
+
+#section04 .title {
+    width: 582px;
+    height: 292px;
+    top: 228px;
+    left: 246px;
+}
+
+#section04 .page {
+    width: 636px;
+    height: 58px;
+    bottom: 58px;
+    left: 50%;
+    margin-left: -318px;
+}
+
+#section04 .page > div > div {
+    position: absolute;
+}
+
+#section04 .page .font > div {
+    width: 17px;
+    height: 13px;
+    bottom: 0;
+}
+
+#section04 .page .font .font_01 {
+    left: 184px;
+}
+#section04 .page .font .font_02 {
+    left: 267px;
+}
+#section04 .page .font .font_03 {
+    right: 268px;
+}
+#section04 .page .font .font_04 {
+    right: 184px;
+
+}
+
+#section04 .page .circle > div {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#section04 .page .circle .circle_press {
+    left: 270px;
+}
+
+#section04 .page .circle .circle_1 {
+    left: 186px;
+}
+
+#section04 .page .circle .circle_2 {
+    right: 270px;
+}
+#section04 .page .circle .circle_3 {
+    right: 186px;
+}
+
+#section04 .page .line {
+    width: 636px;
+    height: 12px;
+    top: 0;
+}
+
+
+/** Scene05 **/
+
+#section05{
+    width: 1702px;
+    position: relative;
+    left: 0;
+}
+#section05 .background {
+    position: absolute;
+    left: 0;
+}
+
+
+/**section05 z-200**/
+#section05 .gradient {
+    width: 1071px;
+    position: relative;
+    left: 210px;
+    z-index: 200;
+}
+
+#section05 .gradient .gradient_bg {
+    position: absolute;
+    width: 1071px;
+    top: 553px;
+}
+/*#section05 .gradient .gradient_description {*/
+/*    position: absolute;*/
+/*    top: 898px;*/
+/*    left: 50%;*/
+/*    margin-left: -72px;*/
+/*}*/
+#section05 .gradient .gradient_button_arrow {
+    position: absolute;
+    top: 758px;
+    left: 92%;
+    margin-left: -18px;
+}
+
+#section05 .gradient .gradient_button_arrow {
+    -webkit-animation: popup_btn_anim 2s infinite;
+    animation: popup_btn_anim 2s infinite;
+}
+
+
+#section05 .gradient .gradient_button_circle {
+    position: absolute;
+    top: 730px;
+    left: 92%;
+    margin-left: -30.5px;
+}
+
+#section05 .gradient .gradient_button_circle {
+    animation: loading 25s linear infinite;
+}
+
+@keyframes button_circle {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+#section05_content > div {
+    position: absolute;
+}
+
+#section05_content .img_content {
+    position:relative;
+    width: 790px;
+    height: 1589px;
+    top: 0;
+    left: 388px;
+
+}
+
+#section05_content .img_font {
+    width: 31px;
+    height: 19px;
+    top: 94px;
+    left: 323px;
+}
+
+/*#section05_content .scroll_bg {*/
+/*    width: 12px;*/
+/*    height: 151px;*/
+/*    top: 329px;*/
+/*    left: 1204px;*/
+/*}*/
+
+/*#section05_content .scroll_bar {*/
+/*    width: 20px;*/
+/*    height: 318px;*/
+/*    top: 336px;*/
+/*    left: 1208px;*/
+/*}*/
+
+/*#section05_content .arrow {*/
+/*    width: 16px;*/
+/*    height: 55px;*/
+/*    left: 327px;*/
+/*    bottom: 130px;*/
+/*}*/
+
+
+/** Scene06 **/
+#section06{
+    width: 1912px;
+    height: 980px;
+    left: 0;
+    background: url("../images/common/sub_2/sub_2_img_2.png")no-repeat;
+}
+
+
+/** 시놉시스 파트 3 **/
+#section07{
+    width: 1710px;
+    position: relative;
+    left: 0;
+}
+
+#section07 > div {
+    position: absolute;
+}
+
+#section07 .title {
+    width: 493px;
+    height: 315px;
+    top: 228px;
+    left: 246px;
+}
+
+#section07 .page {
+    width: 636px;
+    height: 58px;
+    bottom: 58px;
+    left: 50%;
+    margin-left: -318px;
+}
+
+#section07 .page > div > div {
+    position: absolute;
+}
+
+#section07 .page .font > div {
+    width: 17px;
+    height: 13px;
+    bottom: 0;
+}
+
+#section07 .page .font .font_01 {
+    left: 184px;
+}
+#section07 .page .font .font_02 {
+    left: 267px;
+}
+#section07 .page .font .font_03 {
+    right: 268px;
+}
+#section07 .page .font .font_04 {
+    right: 184px;
+
+}
+
+#section07 .page .circle > div {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+}
+
+#section07 .page .circle .circle_press {
+    right: 270px;
+}
+
+#section07 .page .circle_1 {
+    left: 270px;
+}
+
+#section07 .page .circle_2 {
+    left: 186px;
+}
+#section07 .page .circle_3 {
+    right: 186px;
+}
+
+#section07 .page .line {
+    width: 636px;
+    height: 12px;
+    top: 0;
+}
+
+/** Scene08 **/
+#section08{
+    width: 1800px;
+    left: 0;
+}
+
+/** Scene09 **/
+#section09{
+    width: 2550px;
+    position: relative;
+    left: 0;
+}
+
+#section09 .background {
+    position: absolute;
+    left: 0;
+}
+
+/**section09 z-200**/
+#section09 .gradient {
+    width: 1071px;
+    position: relative;
+    left: 220px;
+    z-index: 200;
+}
+
+#section09 .gradient .gradient_bg {
+    position: absolute;
+    width: 1071px;
+    top: 553px;
+}
+/*#section09 .gradient .gradient_description {*/
+/*    position: absolute;*/
+/*    top: 898px;*/
+/*    left: 50%;*/
+/*    margin-left: -72px;*/
+/*}*/
+#section09 .gradient .gradient_button_arrow {
+    position: absolute;
+    top: 758px;
+    left: 92%;
+    margin-left: -18px;
+}
+
+#section09 .gradient .gradient_button_arrow {
+    -webkit-animation: popup_btn_anim 2s infinite;
+    animation: popup_btn_anim 2s infinite;
+}
+
+#section09 .gradient .gradient_button_circle {
+    position: absolute;
+    top: 730px;
+    left: 92%;
+    margin-left: -30.5px;
+}
+
+
+#section09 .gradient .gradient_button_circle {
+    animation: loading 25s linear infinite;
+}
+
+@keyframes button_circle {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+#section09_content > div {
+    position: absolute;
+}
+
+#section09_content .img_content {
+    position:relative;
+    width: 790px;
+    height: 1589px;
+    top: 0;
+    left: 408px;
+}
+
+#section09_content .img_font {
+    width: 31px;
+    height: 19px;
+    top: 94px;
+    left: 343px;
+}
+
+/*#section09_content .scroll_bg {*/
+/*    width: 12px;*/
+/*    height: 151px;*/
+/*    top: 329px;*/
+/*    left: 1224px;*/
+/*}*/
+
+/*#section09_content .scroll_bar {*/
+/*    width: 20px;*/
+/*    height: 318px;*/
+/*    top: 336px;*/
+/*    left: 1228px;*/
+/*}*/
+
+/*#section09_content .arrow {*/
+/*    width: 16px;*/
+/*    height: 55px;*/
+/*    left: 347px;*/
+/*    bottom: 130px;*/
+/*}*/
+
+
+
+/** Scene10 **/
+#section10{
+    width: 2041px;
+    left: 0;
+}
+
+/** 시놉시스 파트 4 **/
+/** Scene11 **/
+#section11{
+    width: 1675px;
+    position: relative;
+    left: 0;
+}
+
+#section11 > div {
+    position: absolute;
+}
+
+#section11 .title {
+    width: 446px;
+    height: 315px;
+    top: 228px;
+    left: 248px;
+}
+
+
+#section11 .page {
+    width: 636px;
+    height: 58px;
+    bottom: 58px;
+    left: 50%;
+    margin-left: -318px;
+}
+
+#section11 .page > div > div {
+    position: absolute;
+}
+
+#section11 .page .font > div {
+    width: 17px;
+    height: 13px;
+    bottom: 0;
+}
+
+#section11 .page .font .font_01 {
+    left: 184px;
+}
+#section11 .page .font .font_02 {
+    left: 267px;
+}
+#section11 .page .font .font_03 {
+    right: 268px;
+}
+#section11 .page .font .font_04 {
+    right: 184px;
+
+}
+
+#section11 .page .circle > div {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+}
+
+#section11 .page .circle .circle_press {
+    right: 186px;
+}
+
+#section11 .page .circle_1 {
+    left: 270px;
+}
+
+#section11 .page .circle_2 {
+    right: 270px;
+}
+#section11 .page .circle_3 {
+    left: 186px;
+}
+
+#section11 .page .line {
+    width: 636px;
+    height: 12px;
+    top: 0;
+}
+
+
+/** Scene12 **/
+#section12{
+    width: 1675px;
+    left: 0;
+}
+
+
+/** Scene13 **/
+#section13{
+    left: 0;
+}
+
+
+#menu .youtube a span {
+    display: none;
+}

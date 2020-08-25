@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+    <title> horizontal - parallax</title>
+    <link rel="stylesheet" href="css/plugin/reset.css"/>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/plugin/common.css">
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <script src="js/plugin/jquery-1.8.1.min.js"></script>
+    <script src="js/plugin/jquery.easing.1.3.min.js"></script>
+    <script src="js/plugin/prefixfree.min.js"></script>
+    <script src="js/plugin/respond.min.js"></script>
+    <script src="js/plugin/jquery.nicescroll.min.js"></script>
+    <script src="js/plugin/jquery.mousewheel.min.js"></script>
+    <script src="js/plugin/logic.js"></script>
+    <script src="js/plugin/drag.js"></script>
+    <script src="js/plugin/jquery.slides.js"></script>
+    <script src="js/snow.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if It IE 9] <script src="js/respond.min.js"></script> <[endif]-->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="favicon" href="" type="image/x-icon">
+
+    <script>
+        $(document).ready(function () {
+// drag event start
+            var count = 0;//위치값 0에서 시작
+            $("#intro .contents .begin_circle_b").draggable({//해당 선택자를 드래그 하겠다
+                axis: "y",//이동하고자 하는 축은 y축 (= x축은 사용 안하겠다)
+                containment: '#intro .contents .begin_circle_b',//부모를 감싸서 드래그하는 선택자가 벗어나지 못하게 하겠다
+                scroll: true,//스크롤 구동영역 설정
+                cursor: "move",//마우스 모양 move로 변경
+                drag: function () {
+                    count++;//드래그하면 숫자 증가
+                    if (count == 30) { //숫자가 10을 넘는다면 이렇게 event 발동하겠다
+                        $('#intro,#intro2').addClass('on');
+                        $('#canv').delay(5000).fadeIn(700);
+                    } else {
+                    }
+                }
+            });
+// drag event end
+
+        });
+    </script>
+
+
+
+</head>
+<body>
+
+<!--<div class="posNum"></div>-->
+
+
+<div id="key" class="in1"></div>
+
+<!----------  fix section  ---------->
+<section id="loading">
+    <img class="loading_title" src="images/common/loading/loading.png" alt="">
+</section>
+
+
+<section id="intro">
+    <div class="contents">
+        <div class="logo_b"><img src="images/common/intro/logo_b.png" alt=""></div>
+        <div class="begin_font"><a href="#"><img src="images/common/intro/begin_font.png" alt=""></a></div>
+        <div class="begin_circle_b"><a href="#"><img src="images/common/intro/begin_circle_b.png" alt=""></a></div>
+        <div class="begin_line"><img src="images/common/intro/begin_line.png" alt=""></div>
+        <div class="begin_circle_s"><img src="images/common/intro/begin_circle_s.png" alt=""></div>
+    </div>
+
+    <video id="intro_video" src="images/mp4/intro.mp4" autoplay muted loop></video>
+</section>
+
+
+<section id="intro2">
+    <canvas id='canv' style="display: none;"></canvas>
+    <div class="font">
+        <div><img src="images/common/intro_2/intro_2_font_1.png" alt=""></div>
+        <div><img src="images/common/intro_2/intro_2_font_2.png" alt=""></div>
+    </div>
+
+    <div class="gold_key"><img src="images/common/intro_2/intro_2_key.png" alt=""></div>
+
+    <div class="intro_btn">
+        <div class="button_circle"><a href="#"><img src="images/common/intro_2/button_circle.png" alt=""></a></div>
+        <div class="button_shape"><a href="#"><img src="images/common/intro_2/button_shape.png" alt=""></a></div>
+    </div>
+</section>
+
+
+<!-- 헤더 -->
+<header id="header">
+
+    <div class="bg"></div>
+
+    <div class="icon_close"><a href="#"><img src="images/common/header/icon_close.png" alt=""></a></div>
+
+    <ul class="list naviJs">
+        <li class="list_synopsis"><a class="first after" href="#section01"><img src="images/common/menu/menu_list_00.png" alt=""></a></li>
+        <li class="list_characters"><a class="first after" href="character_popup.html"><img src="images/common/menu/menu_list_01.png" alt=""></a></li>
+        <li class="list_gallery"><a class="first after" href="gallery/index.html"><img src="images/common/menu/menu_list_02.png" alt=""></a></li>
+        <li class="list_trailer"><a class="first after" href="trailer.html"><img src="images/common/menu/menu_list_03.png" alt=""></a></li>
+    </ul>
+
+</header><!-- header end -->
+
+<!-- 메뉴 -->
+<section id="menu">
+    <h1 class="logo"><a href="#"><img src="images/common/header/logo_s.png" alt=""></a></h1>
+    <div class="ham"><a href="#"><img src="images/common/header/icon_menu.png" alt=""></a></div>
+    <div class="instagram"><a href="https://www.instagram.com/disneysnutcracker/" target="_blank"><img src="images/common/header/instagram.png" alt=""></a></div>
+    <div class="youtube"><a href="https://youtu.be/O5ubzjYtCQY" target="_blank"><img src="images/common/header/youtube.png" alt=""></a></div>
+    <div class="sound"><a href="#"><img src="images/common/header/sound.png" alt=""></a></div>
+    <div class="language"><a href="#"><img src="images/common/header/language.png" alt=""></a></div>
+</section>
+
+
+
+<div class="page">
+    <div class="line"><img src="images/common/sub/sub_page_line.png" alt=""></div>
+
+    <ul class="circle clearfix">
+        <li><a href="#section01" class="on"></a></li>
+        <li><a href="#section04"></a></li>
+        <li><a href="#section07"></a></li>
+        <li><a href="#section11"></a></li>
+    </ul>
+
+    <div class="font">
+        <div class="font_01"><img src="images/common/sub/sub_page_01.png" alt=""></div>
+        <div class="font_02"><img src="images/common/sub/sub_page_02.png" alt=""></div>
+        <div class="font_03"><img src="images/common/sub/sub_page_03.png" alt=""></div>
+        <div class="font_04"><img src="images/common/sub/sub_page_04.png" alt=""></div>
+    </div>
+</div>
+
+<!----------  fix section  end ---------->
+
+
+
+<!-- main_popup 시작 -->
+<section id="main_popup">
+    <section id="section02_popup">
+        <div class="bg"></div>
+        <div class="img">
+            <div class="img_content"><img src="images/common/sub_1/sub_img_content_01.png" alt=""></div>
+            <div class="img_font"><img src="images/common/sub_1/sub_img_font_01.png" alt=""></div>
+        </div>
+    </section>
+
+    <section id="section05_popup">
+        <div class="bg"></div>
+        <div class="img">
+            <div class="img_content"><img src="images/common/sub_2/sub_img_content_02.png" alt=""></div>
+            <div class="img_font"><img src="images/common/sub_2/sub_img_font_02.png" alt=""></div>
+        </div>
+    </section>
+
+    <section id="section09_popup">
+        <div class="bg"></div>
+        <div class="img">
+            <div class="img_content"><img src="images/common/sub_3/sub_img_content_03.png" alt=""></div>
+            <div class="img_font"><img src="images/common/sub_3/sub_img_font_03.png" alt=""></div>
+        </div>
+    </section>
+</section><!-- main_popup end -->
+
+
+
+
+
+
+
+
+
+
+<main id="container" class="container">
+
+    <section class="main">
+
+        <!--시놉시스 파트 1-->
+        <section id="section01">
+            <div class="title"><img src="images/common/sub_1/sub_title_1.png" alt=""></div>
+            <div class="directions"><img src="images/common/sub/directions.png" alt=""></div>
+
+            <video src="images/mp4/part1.mp4" autoplay muted loop></video>
+        </section><!-- scene01 end -->
+
+        <section id="section02">
+            <div class="background"><img src="images/common/sub_1/sub_1_img_1.png" alt=""></div>
+            <div class="gradient">
+                <div class="gradient_bg"><img src="images/common/sub/gradient_bg.png" alt=""></div>
+<!--                <div class="gradient_description"><img src="images/common/sub/gradient_description.png" alt=""></div>-->
+                <div class="gradient_button_arrow"><img src="images/common/sub/gradient_button_arrow.png" alt=""></div>
+                <div class="gradient_button_circle"><a href="#"><img src="images/common/sub/gradient_button_circle.png" alt=""></a></div>
+            </div>
+
+
+
+            <div id="section02_content">
+                <div class="img_content"><img src="images/common/sub_1/sub_img_content_01.png" alt=""></div>
+                <div class="img_font"><img src="images/common/sub_1/sub_img_font_01.png" alt=""></div>
+<!--                <div class="arrow"><img src="images/common/sub/arrow.png" alt=""></div>-->
+<!--                <div class="scroll_bg"><img src="images/common/sub/scroll_bg.png" alt=""></div>-->
+<!--                <div class="scroll_bar"><img src="images/common/sub/scroll_bar.png" alt=""></div>-->
+        </div>
+        </section>
+
+
+        <section id="section03"></section><!-- scene03 end -->
+
+
+        <!--시놉시스 파트 2-->
+        <section id="section04">
+            <div class="title"><img src="images/common/sub_2/sub_title_2.png" alt=""></div>
+
+            <video src="images/mp4/part2.mp4" autoplay muted loop></video>
+        </section><!-- scene04 end -->
+
+          <section id="section05">
+              <div class="background"><img src="images/common/sub_2/sub_2_img_1.png" alt=""></div>
+              <div class="gradient">
+                  <div class="gradient_bg"><img src="images/common/sub/gradient_bg.png" alt=""></div>
+<!--                  <div class="gradient_description"><img src="images/common/sub/gradient_description.png" alt=""></div>-->
+                  <div class="gradient_button_arrow"><img src="images/common/sub/gradient_button_arrow.png" alt=""></div>
+                  <div class="gradient_button_circle"><a href="#"><img src="images/common/sub/gradient_button_circle.png" alt=""></a></div>
+              </div>
+
+                <div id="section05_content">
+                    <div class="img_content"><img src="images/common/sub_2/sub_img_content_02.png" alt=""></div>
+                    <div class="img_font"><img src="images/common/sub_2/sub_img_font_02.png" alt=""></div>
+<!--                    <div class="scroll_bg"><img src="images/common/sub/scroll_bg.png" alt=""></div>-->
+<!--                    <div class="scroll_bar"><img src="images/common/sub/scroll_bar.png" alt=""></div>-->
+<!--                    <div class="arrow"><img src="images/common/sub/arrow.png" alt=""></div>-->
+                </div>
+            </section><!-- scene05 end -->
+
+        <section id="section06"></section><!-- scene06 end -->
+
+
+        <!--시놉시스 파트 3-->
+        <section id="section07">
+            <div class="title"><img src="images/common/sub_3/sub_title_3.png" alt=""></div>
+
+            <video src="images/mp4/part3.mp4" autoplay muted loop></video>
+        </section>
+        <!-- scene07 end -->
+
+        <section id="section08">
+            <div class="background"><img src="images/common/sub_3/sub_3_img_1.png" alt=""></div>
+        </section>
+        <!-- scene08 end -->
+
+        <section id="section09">
+            <div class="background"><img src="images/common/sub_3/sub_3_img_2.png" alt=""></div>
+            <div class="gradient">
+                <div class="gradient_bg"><img src="images/common/sub/gradient_bg.png" alt=""></div>
+<!--                <div class="gradient_description"><img src="images/common/sub/gradient_description.png" alt=""></div>-->
+                <div class="gradient_button_arrow"><img src="images/common/sub/gradient_button_arrow.png" alt=""></div>
+                <div class="gradient_button_circle"><a href="#"><img src="images/common/sub/gradient_button_circle.png" alt=""></a></div>
+            </div>
+
+            <div id="section09_content">
+                <div class="img_content"><img src="images/common/sub_3/sub_img_content_03.png" alt=""></div>
+                <div class="img_font"><img src="images/common/sub_3/sub_img_font_03.png" alt=""></div>
+<!--                <div class="scroll_bg"><img src="images/common/sub/scroll_bg.png" alt=""></div>-->
+<!--                <div class="scroll_bar"><img src="images/common/sub/scroll_bar.png" alt=""></div>-->
+<!--                <div class="arrow"><img src="images/common/sub/arrow.png" alt=""></div>-->
+            </div>
+        </section>
+        <!-- scene09 end -->
+
+        <section id="section10">
+            <div class="background"><img src="images/common/sub_3/sub_3_img_3.png" alt=""></div>
+        </section>
+        <!-- scene10 end -->
+
+
+        <!--시놉시스 파트 4-->
+        <section id="section11">
+            <div class="title"><img src="images/common/sub_3/sub_title_3.png" alt=""></div>
+
+            <video src="images/mp4/part4.mp4" autoplay muted loop></video>
+        </section>
+        <!-- scene11 end -->
+        <section id="section12"> <div class="background"><img src="images/common/sub_4/sub_4_img_1.png" alt=""></div>
+        </section>
+        <!-- scene12 end -->
+        <section id="section13"><div class="background"><img src="images/common/sub_4/sub_4_img_2.png" alt=""></div>
+        </section>
+        <!-- scene13 end -->
+
+    </section><!-- wrap end -->
+
+</main><!-- scrollBox end -->
+
+
+
+<!----------  pop section  ---------->
+
+<div class="pop">
+
+</div><!--pop end-->
+
+
+
+<!----------  pop section  end  ---------->
+
+
+</body>
+</html>
